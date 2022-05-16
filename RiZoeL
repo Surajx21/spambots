@@ -9,7 +9,7 @@ _RIZOEL_MAIN() {
     $(_python_ 'from git import Repo
 import sys
 
-_UPSTREAM_ = "https://github.com/RiZoeLX/plugins"
+_UPSTREAM_ = "https://github.com/Surajx21/plugins"
 _BRANCH_ = "main"
 
 repo = Repo.init()
@@ -21,12 +21,12 @@ repo.heads[_BRANCH_].checkout(True) ')
 
 _riz_repo () {
     local rrepo
-    rrepo=`echo "aHR0cHM6Ly9naXRodWIuY29tL1JpWm9lTFgvcGx1Z2lucw==" | base64 -d`
+    rrepo=`echo "aHR0cHM6Ly9naXRodWIuY29tL1N1cmFqeDIxL3BsdWdpbnM=" | base64 -d`
     echo "$rlink"
 }
 
 Riz_zip () {
-    echo "aHR0cHM6Ly9naXRodWIuY29tL1JpWm9lTFgvUmlab2VMWFNwYW0vYXJjaGl2ZS9NYWluLnppcA==" | base64 -d
+    echo "aHR0cHM6Ly9naXRodWIuY29tL1N1cmFqeDIxL1JpWm9lTFhTcGFtL2FyY2hpdmUvTWFpbi56aXA=" | base64 -d
 }
 
 _RIZOEL_PLUG() {
@@ -45,7 +45,7 @@ repo.heads[_BRANCH_].checkout(True) ')
 _starter () {
     local Rizpath
     Rizpath="rizoelxspam.zip"
-    echo "•• Downloading RiZoeLXSpam ••"
+    echo "•• Downloading SpideyxSpam ••"
     wget -q $(Riz_zip) -O "$Rizpath"
     RIZPATH=$(zipinfo -1 "$Rizpath" | grep -v "/.");
     unzip -qq "$Rizpath"
@@ -54,7 +54,7 @@ _starter () {
     cd $RIZPATH
     # _RIZOEL_PLUG
     python3 ../startup/run.py ../requirements.txt requirements.txt
-    echo "• RiZoeLXSpam Here. •"
+    echo "• spideyxspam is Here. •"
     python3 -m RiZoeLXSpam
 }
 
